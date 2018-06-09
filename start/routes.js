@@ -15,5 +15,5 @@
 
 const Route = use('Route')
 
-Route.get('user', 'UserController.get')
+Route.get('login', 'UserController.login')
 Route.on('/').render('welcome')

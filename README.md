@@ -8,9 +8,9 @@ adonis seed
 adonis serve --dev
 ```
 
-visit localhost:3333/user
+visit http://localhost:3333/user
 
-example expected result
+example expected result for the enhancement
 ```
 {
   "id": 4,

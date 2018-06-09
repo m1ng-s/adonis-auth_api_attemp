@@ -2,7 +2,7 @@
 const User = use('App/Models/User')
 
 class UserController {
-  async get({ auth, request, response }) {
+  async login({ auth, request, response }) {
     let res = null
     try {
       res = await auth.attempt('hello@world.com', 'helloworld')
