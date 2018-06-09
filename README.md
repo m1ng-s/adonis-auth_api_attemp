@@ -3,6 +3,7 @@
 install the adonis cli and clone the repo
 ```
 npm i
+adonis migration:run
 adonis seed
 adonis serve --dev
 ```
