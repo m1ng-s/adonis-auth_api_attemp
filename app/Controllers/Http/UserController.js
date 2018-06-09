@@ -1,14 +1,16 @@
 'use strict'
 const User = use('App/Models/User')
-const Factory = use('Factory')
 
 class UserController {
   async get({ auth, request, response }) {
-    const fakeUser = await Factory
-      .model('App/Models/User')
-      .create()
-    await fakeUser.generate(fakeUser)
-
+    let res = null
+    try {
+      res = await auth.attempt('hello@world.com', 'helloworld')
+    } catch (e) {
+      console.error(e)
+    }
+    // expect to have the user modal instance here
+    return response.json(auth.user)
   }
 }
 
