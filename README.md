@@ -13,6 +13,9 @@ visit http://localhost:3333/login
 example expected result for the enhancement
 ```
 {
+  tokens:{
+    ...
+  },
   "id": 4,
   "username": "sapdo",
   "email": "hello@world.com",
