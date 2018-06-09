@@ -1,7 +1,6 @@
 # demo for https://github.com/adonisjs/adonis-auth/issues/113
 
-install the adonis cli
-clone the repo
+install the adonis cli and clone the repo
 ```
 npm i
 adonis seed
