@@ -10,7 +10,10 @@ class UserController {
       console.error(e)
     }
     // expect to have the user modal instance here
-    return response.json(auth.user)
+    return response.json({
+      tokens: res,
+      user: auth.user,
+    })
   }
 }
 
