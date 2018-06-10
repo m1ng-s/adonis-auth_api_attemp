@@ -3,16 +3,18 @@ const User = use('App/Models/User')
 
 class UserController {
   async login({ auth, request, response }) {
-    let res = null
+    let user = null
+    let token = null
     try {
-      res = await auth.attempt('hello@world.com', 'helloworld')
+      user = await auth.validate('hello@world.com', 'helloworld', true)
+      token = await auth.generate(user)
     } catch (e) {
       console.error(e)
     }
-    // expect to have the user modal instance here
+
     return response.json({
-      tokens: res,
-      user: auth.user,
+      token,
+      user,
     })
   }
 }
